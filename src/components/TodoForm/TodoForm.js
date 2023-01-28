@@ -11,7 +11,8 @@ function TodoForm() {
   const onSubmit = (e) => {
     e.preventDefault();
     if(textTarea.length > 0){
-      addTarea(textTarea[0].toUpperCase() + textTarea.substring(1))
+      const tarea = textTarea[0].toUpperCase() + textTarea.substring(1);
+      addTarea(tarea)
       setOpenModal(false);
     }
   }

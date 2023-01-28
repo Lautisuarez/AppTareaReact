@@ -17,17 +17,19 @@ function AppUI() {
       <h1>Lista de tareas</h1>
       <TodoCounter />
       <TodoSearch />
-      <TodoList>
-        {filterTareas.map(tarea => (
-          <TodoItem 
-            text={tarea.text} 
-            key={tarea.text} 
-            completed={tarea.completed}
-            onComplete={() => completeTareas(tarea.text)}
-            onDelete={() => deleteTareas(tarea.text)}
-          />
-        ))}
-      </TodoList>
+      {(filterTareas.length > 0) && 
+        <TodoList>
+          {filterTareas.map(tarea => (
+            <TodoItem 
+              text={tarea.text} 
+              key={tarea.text} 
+              completed={tarea.completed}
+              onComplete={() => completeTareas(tarea.text)}
+              onDelete={() => deleteTareas(tarea.text)}
+            />
+          ))}
+        </TodoList>
+      }
 
       {error && <p className='error-text'>Oops! Ocurrió un error...</p>}
       {(!loading && !filterTareas.length) && 

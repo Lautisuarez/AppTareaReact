@@ -6,7 +6,9 @@ function TodoItem({ text, completed, onComplete, onDelete }) {
           <span className="material-symbols-rounded btn-checked" onClick={onComplete}>task_alt</span>
         }
         <p>{text}</p>
-        <span className="material-symbols-rounded btn-delete" onClick={onDelete}>delete</span>
+        <div>
+          <span className="material-symbols-rounded btn-delete" onClick={onDelete}>delete</span>
+        </div>
     </li>
   )
 }

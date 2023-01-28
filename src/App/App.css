@@ -19,12 +19,25 @@ h1 {
     color: var(--color-texto-black);
 }
 .tareas {
-    width: 70%;
+    max-height: 390px;
+    min-width: 300px;
+    overflow-y: scroll;
+    width: 60%;
     margin: 0 auto;
+    padding: 10px;
+}
+.tareas::-webkit-scrollbar{
+    background-color: var(--color-fondo-black);
+    border-radius: 10px;
+}
+.tareas::-webkit-scrollbar-thumb{
+    background-color: var(--color-texto-light);
+    border-radius: 10px;
 }
 @media only screen and (max-width: 768px) {
     .tareas {
         width: 90%;
+        max-height: 350px;
     }
 }
 .tareas ul {
@@ -47,8 +60,13 @@ h1 {
     font-size: 20px;
 }
 .tareas ul li p {
-    padding: 0px 50px;
+    padding: 0px 15px;
     margin: 5px 0px;
+}
+.tareas ul li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 input {
     background-color: var(--color-fondo-black);
@@ -102,8 +120,8 @@ input {
     color: var(--color-texto-light);
     background-color: var(--color-fondo-black);
     border: none;
-    padding: 10px;
-    border-radius: 100%;
+    padding: 10px 12px;
+    border-radius: 50%;
     -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
@@ -117,6 +135,12 @@ input {
     cursor: pointer;
     background-color: var(--color-texto-light);
     color: var(--color-fondo-black);
+}
+@media only screen and (max-width: 768px){
+    .btn-more {
+        right: 15px;
+        bottom: 15px;
+    }
 }
 .btn-more span {
     font-size: 40px;
@@ -150,9 +174,20 @@ input {
 .msg-text span:last-child{
     color: var(--color-texto-light);
     background-color: var(--color-fondo-black);
-    padding: 10px 14px;
+    padding: 10px 15px;
     border-radius: 50%;
     margin: 0px 5px;
+}
+@media only screen and (max-width: 768px) {
+    .msg-text span::first-line {
+        font-size: 125px;
+    }
+    .msg-text p:first-of-type{
+        font-size: 25px;
+    }
+    .msg-text p:last-of-type {
+        font-size: 15px;
+    }
 }
 .loader {
     position: relative;
