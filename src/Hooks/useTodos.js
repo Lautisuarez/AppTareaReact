@@ -1,10 +1,8 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 // Custom Hook
 import useLocalStorage from "./UseLocalStorage";
 
-const TareaContext = createContext();
-
-function TareaProvider(props){
+function useTodos(){
     const {item: tareas, saveItem: saveTareas, loading, error} = useLocalStorage("TAREAS_V1", []);
     const [searchValue, setSearchValue] = useState(""); 
     const [openModal, setOpenModal] = useState(false);
@@ -41,24 +39,20 @@ function TareaProvider(props){
         const newTareas = tareas.filter(tarea => tarea.text !== text)
         saveTareas(newTareas)
     }
-    return (
-        <TareaContext.Provider value={{
-            loading,
-            error,
-            totalTareas,
-            completedTareas,
-            searchValue,
-            setSearchValue,
-            filterTareas,
-            addTarea,
-            completeTareas,
-            deleteTareas,
-            openModal,
-            setOpenModal
-        }}>
-            {props.children}
-        </TareaContext.Provider>
-    )
+    return {
+        loading,
+        error,
+        totalTareas,
+        completedTareas,
+        searchValue,
+        setSearchValue,
+        filterTareas,
+        addTarea,
+        completeTareas,
+        deleteTareas,
+        openModal,
+        setOpenModal
+    }
 }
 
-export { TareaContext, TareaProvider };
+export { useTodos };

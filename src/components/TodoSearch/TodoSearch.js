@@ -1,17 +1,15 @@
-import { useContext } from "react";
-import { TareaContext } from "../../TareaContext/TareaContext";
-
-function TodoSearch() {
-  const { searchValue, setSearchValue } = useContext(TareaContext);
+function TodoSearch({ searchValue, setSearchValue, totalTareas }) {
   const onSearchValueChange = (e) => {
     setSearchValue(e.target.value);
   }
   
   return (
     <input 
+      className="search"
       placeholder='Buscar tarea...'
       onChange={onSearchValueChange}
       value={searchValue} 
+      disabled={(totalTareas === 0)}
     />
   )
 }

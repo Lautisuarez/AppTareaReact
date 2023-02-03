@@ -1,9 +1,7 @@
-import { useContext, useState } from "react"
-import { TareaContext } from "../../TareaContext/TareaContext";
+import { useState } from "react"
 
-function TodoForm() {
+function TodoForm({ addTarea, setOpenModal }) {
   const [textTarea, setTextTarea] = useState("");
-  const { addTarea, setOpenModal } = useContext(TareaContext);
 
   const onCancel = () => {
     setOpenModal(false);

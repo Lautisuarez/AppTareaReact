@@ -145,7 +145,9 @@ input {
 .btn-more span {
     font-size: 40px;
 }
-
+.search:disabled {
+    opacity: 25%;
+}
 .error-text {
     color: var(--color-texto-light);
     background-color: var(--color-remove);
@@ -153,6 +155,11 @@ input {
     font-size: 20px;
     text-align: center;
     padding: 10px;
+    margin: 0px 20px;
+}
+.error-text span {
+    font-weight: bold;
+    font-size: 110%;
 }
 .msg-text {
     text-align: center;
@@ -195,8 +202,8 @@ input {
     height: 180px;
     background: #fff;
     border-radius: 4px;
-  }
-  .loader:before{
+}
+.loader:before{
     content: '';
     position: absolute;
     width: 54px;
@@ -211,8 +218,8 @@ input {
     background-position: center top;
     transform: translate(-50% , -65%);
     box-shadow: 0 -3px rgba(0, 0, 0, 0.25) inset;
-  }
- .loader:after{
+}
+.loader:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -223,13 +230,12 @@ input {
     background: linear-gradient(to bottom, #005bc3af 30%, #0000 31%);
     background-size: 100% 16px;
     animation: writeDown 2s ease-out infinite;
- }
+}
 
- @keyframes writeDown {
+@keyframes writeDown {
     0% { height: 0%; opacity: 0;}
     20%{ height: 0%; opacity: 1;}
     80% { height: 65%; opacity: 1;}
     100% { height: 65%; opacity: 0;}
- }
-      
+}
       
