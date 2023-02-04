@@ -1,0 +1,50 @@
+.bg-notification {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.bg-modal-notification{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 25% auto;
+    text-align: center;
+    background-color: var(--color-error);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+}
+@media only screen and (max-width: 768px){
+    .bg-modal-notification {
+        width: 80%;
+        margin: 50% auto;
+    }
+}
+.bg-modal-notification p span {
+    font-size: 130%;
+}
+.bg-modal-notification p {
+    color: var(--color-texto-light);
+}
+.bg-modal-notification button {
+    color: var(--color-error);
+    background-color: var(--color-texto-light);
+    border: 1px solid var(--color-texto-light);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+.bg-modal-notification button:hover {
+    cursor: pointer;
+    color: var(--color-texto-light);
+    background-color: var(--color-error);
+}

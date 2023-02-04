@@ -10,6 +10,7 @@ import TodoList from '../components/TodoList/TodoList';
 import TodoItem from '../components/TodoItem/TodoItem';
 import TodoForm from '../components/TodoForm/TodoForm';
 import CreateTodoButton from '../components/CreateTodoButton/CreateTodoButton';
+import ChangeAlertWithStorageListener from '../components/ChangeAlert/ChangeAlert';
 
 function App() {
   const {
@@ -24,7 +25,8 @@ function App() {
     completedTareas,
     searchValue, 
     setSearchValue,
-    addTarea
+    addTarea,
+    sincronizeTodos
   } = useTodos();
 
   return (
@@ -44,7 +46,7 @@ function App() {
       </TodoHeader>
 
       {/* LISTA DE TAREAS */}
-      {(filterTareas.length > 0) && 
+      {(filterTareas.length > 0 && !loading && !error) && 
         <TodoList>
           {filterTareas.map(tarea => (
             <TodoItem 
@@ -87,6 +89,9 @@ function App() {
         setOpenModal={setOpenModal}
         openModal={openModal}
       />
+
+      {/* ALERTA A CAMBIOS DE EL STORAGE */}
+      <ChangeAlertWithStorageListener sincronize={sincronizeTodos} />
     </div>
   )
 }

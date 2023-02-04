@@ -4,6 +4,7 @@
     --color-texto-black: #7c7c7c;
     --color-remove: #820000;
     --color-check: #54B435;
+    --color-error: rgb(205, 45, 45);
 }
 .box {
     margin-top: 5%;
@@ -129,7 +130,7 @@ input {
 	bottom: 40px;
 	right: 40px;
 	transition: all .5s;
-	z-index: 99;
+	z-index: 2;
 }
 .btn-more:hover {
     cursor: pointer;

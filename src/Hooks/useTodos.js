@@ -3,7 +3,7 @@ import { useState } from "react";
 import useLocalStorage from "./UseLocalStorage";
 
 function useTodos(){
-    const {item: tareas, saveItem: saveTareas, loading, error} = useLocalStorage("TAREAS_V1", []);
+    const {item: tareas, saveItem: saveTareas, loading, error, sincronizeItem: sincronizeTodos} = useLocalStorage("TAREAS_V1", []);
     const [searchValue, setSearchValue] = useState(""); 
     const [openModal, setOpenModal] = useState(false);
 
@@ -51,7 +51,8 @@ function useTodos(){
         completeTareas,
         deleteTareas,
         openModal,
-        setOpenModal
+        setOpenModal,
+        sincronizeTodos
     }
 }
 
