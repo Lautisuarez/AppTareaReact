@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/app-tarea-react/static/css/main.07c332d9.css",
-    "main.js": "/app-tarea-react/static/js/main.4ba4aa77.js",
+    "main.css": "/app-tarea-react/static/css/main.1b5a70d3.css",
+    "main.js": "/app-tarea-react/static/js/main.6e718589.js",
     "index.html": "/app-tarea-react/index.html",
-    "main.07c332d9.css.map": "/app-tarea-react/static/css/main.07c332d9.css.map",
-    "main.4ba4aa77.js.map": "/app-tarea-react/static/js/main.4ba4aa77.js.map"
+    "main.1b5a70d3.css.map": "/app-tarea-react/static/css/main.1b5a70d3.css.map",
+    "main.6e718589.js.map": "/app-tarea-react/static/js/main.6e718589.js.map"
   },
   "entrypoints": [
-    "static/css/main.07c332d9.css",
-    "static/js/main.4ba4aa77.js"
+    "static/css/main.1b5a70d3.css",
+    "static/js/main.6e718589.js"
   ]
 }
